@@ -79,6 +79,6 @@ NIDS/
 │
 └── README.md
 
-**License
-**
+LICENSE
+
 This project is licensed under the MIT License.
