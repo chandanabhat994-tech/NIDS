@@ -4,6 +4,8 @@
 
 NIDS (Network Intrusion Detection System) is a Machine Learning based web application designed to detect and classify malicious network traffic using the NSL-KDD dataset.
 
+Checkout-https://nids-qf5t.onrender.com
+
 The system analyzes incoming network traffic features and predicts whether the traffic is:
 
 - Normal
