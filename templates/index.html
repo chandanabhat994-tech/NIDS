@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NIDS - Network Intrusion Detection System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>NIDS</h1>
+
+        <h2>Network Intrusion Detection System</h2>
+
+        <form action="/predict" method="post">
+
+            <label>Duration (Example: 0)</label>
+            <input type="text" name="duration" placeholder="Enter duration" required>
+
+            <label>Protocol Type</label>
+            <select name="protocol_type" required>
+                <option value="">Select Protocol</option>
+                <option value="tcp">TCP</option>
+                <option value="udp">UDP</option>
+                <option value="icmp">ICMP</option>
+            </select>
+
+            <label>Service (Examples: http, ftp, smtp)</label>
+            <input type="text" name="service" placeholder="Enter service" required>
+
+            <label>Flag (Examples: SF, S0, REJ)</label>
+            <input type="text" name="flag" placeholder="Enter flag" required>
+
+            <label>Source Bytes (Example: 491)</label>
+            <input type="text" name="src_bytes" placeholder="Enter source bytes" required>
+
+            <label>Destination Bytes (Example: 0)</label>
+            <input type="text" name="dst_bytes" placeholder="Enter destination bytes" required>
+
+            <label>Count (Example: 2)</label>
+            <input type="text" name="count" placeholder="Enter count" required>
+
+            <label>Service Count (Example: 2)</label>
+            <input type="text" name="srv_count" placeholder="Enter service count" required>
+
+            <label>Serror Rate (Example: 0.0)</label>
+            <input type="text" name="serror_rate" placeholder="Enter serror rate" required>
+
+            <label>Same Service Rate (Example: 1.0)</label>
+            <input type="text" name="same_srv_rate" placeholder="Enter same service rate" required>
+
+            <label>Destination Host Count (Example: 150)</label>
+            <input type="text" name="dst_host_count" placeholder="Enter destination host count" required>
+
+            <label>Destination Host Service Count (Example: 25)</label>
+            <input type="text" name="dst_host_srv_count" placeholder="Enter destination host service count" required>
+
+            <button type="submit">Predict Attack</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
